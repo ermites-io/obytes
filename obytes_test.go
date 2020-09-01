@@ -35,14 +35,14 @@ func TestObfuscateByte(t *testing.T) {
 			t.Logf("ObfuscateByte error\n")
 			t.Fail()
 		}
-		t.Logf("ObfuscateByte in: %x out: %x\n", tests[i].in, obfOut)
+		//t.Logf("ObfuscateByte in: %x out: %x\n", tests[i].in, obfOut)
 
 		outIn, err := deobfuscateByte(obfOut, tests[i].mask_hi, tests[i].mask_lo)
 		if err != nil {
 			t.Logf("DeObfuscateByte error\n")
 			t.Fail()
 		}
-		t.Logf("DeObfuscateByte in: %x out: %x\n", obfOut, outIn)
+		//t.Logf("DeObfuscateByte in: %x out: %x\n", obfOut, outIn)
 
 		if tests[i].in != outIn {
 			t.Logf("matching error %02x vs %02x\n", tests[i].in, outIn)
