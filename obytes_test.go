@@ -12,8 +12,8 @@ import (
 
 type iotest struct {
 	/*
-	inb     []byte
-	outb    []byte
+		inb     []byte
+		outb    []byte
 	*/
 	in      byte // input
 	out     byte // output
@@ -75,11 +75,11 @@ func TestObfuscateByte(t *testing.T) {
 
 func TestObfuscateError(t *testing.T) {
 	/*
-	obfOut, err := obfuscateByte(0, 0x55, 0x55)
-	if err == nil || obfOut != nil {
-		t.Logf("ObfuscateByte Error Test\n")
-		t.Fail()
-	}
+		obfOut, err := obfuscateByte(0, 0x55, 0x55)
+		if err == nil || obfOut != nil {
+			t.Logf("ObfuscateByte Error Test\n")
+			t.Fail()
+		}
 	*/
 
 	obfOut, err := Obfuscate(nil)
@@ -90,17 +90,19 @@ func TestObfuscateError(t *testing.T) {
 }
 
 func TestDeObfuscateError(t *testing.T) {
-	obfOut, err := deobfuscateByte(nil, 0x55, 0x55)
-	if err == nil || obfOut != 0 {
-		t.Logf("DeobfuscateByte Error Test\n")
-		t.Fail()
-	}
+	/*
+		obfOut, err := deobfuscateByte(nil, 0x55, 0x55)
+		if err == nil || obfOut != 0 {
+			t.Logf("DeobfuscateByte Error Test\n")
+			t.Fail()
+		}
 
-	obfOut, err = deobfuscateByte([]byte("123"), 0x55, 0x55)
-	if err == nil || obfOut != 0 {
-		t.Logf("DeobfuscateByte Error Test\n")
-		t.Fail()
-	}
+		obfOut, err = deobfuscateByte([]byte("123"), 0x55, 0x55)
+		if err == nil || obfOut != 0 {
+			t.Logf("DeobfuscateByte Error Test\n")
+			t.Fail()
+		}
+	*/
 
 	obfOutByte, err := Deobfuscate(nil)
 	if err == nil || obfOutByte != nil {
