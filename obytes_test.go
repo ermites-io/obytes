@@ -11,10 +11,6 @@ import (
 // [0101 0101] [0101 0101]
 
 type iotest struct {
-	/*
-		inb     []byte
-		outb    []byte
-	*/
 	in      byte // input
 	out     byte // output
 	mask_lo byte

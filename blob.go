@@ -9,9 +9,7 @@ import (
 )
 
 // this just an obfuscation mechanism to hide "structure" in a flow of bytes
-// with an overhead, it is in ANY WAY a ways to SECURE DATA.
-// obfuscation.
-// XXX need to add an offset prefix of real random data
+// with an overhead, it is NOT in ANY WAY a way to SECURE DATA, it is a simple obfuscation.
 func NewBlob(in []byte, mask_hi, mask_lo byte, prefixlen int) (out []byte, err error) {
 	randpfx := make([]byte, prefixlen)
 	_, err = rand.Read(randpfx)
