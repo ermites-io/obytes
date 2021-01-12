@@ -9,5 +9,6 @@ func (e Error) Error() string { return string(e) }
 
 const (
 	ErrInvalidInput = Error("invalid input")
-	ErrUnexpected = Error("unexpected error")
+	ErrUnexpected   = Error("unexpected error")
+	ErrCrypto       = Error("crypto error")
 )
