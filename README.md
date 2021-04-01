@@ -1,13 +1,16 @@
+[![Documentation](https://godoc.org/github.com/ermites-io/obytes?status.svg)](http://godoc.org/github.com/ermites-io/obytes)
+[![License](https://img.shields.io/badge/License-BSD%203--Clause-blue.svg)](https://opensource.org/licenses/BSD-3-Clause)
+
 obytes
 ======
 
-an easy to use Obfuscated Bytes package.
+a stupidly easy to use bytes obfuscation package.
 
 
 Description
 ===========
 
-This simple package provide simple bytes obfuscations mechanisms.
+This package provide stupid yet annoying bytes obfuscations mechanisms.
 * merge data with of a set of random bytes according to a user defined bitmask, a single byte becomes two obfuscated bytes.
 * random obfuscated key, random obfuscated nonce, xchacha20+poly1305.
 

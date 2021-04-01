@@ -1,5 +1,7 @@
 // +build go1.12
 
+// Package obytes provides simple byte obfuscation primitives with user-defined
+// parameters.
 package obytes
 
 import (
